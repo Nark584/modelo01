@@ -25,8 +25,22 @@
   </noscript>
   <!-- End Meta Pixel Code -->
 
+  <!-- UTMify -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
+  <!-- Redirecionamento com delay de 3s -->
   <script>
-    window.location.replace("https://t.me/ALINELIMASOFC_BOT?start=vip");
+    function redirecionar() {
+      const params = window.location.search; // Captura UTMs atuais
+      window.location.href = "https://t.me/ALINELIMASOFC_BOT?start=vip" + params;
+    }
+    setTimeout(redirecionar, 3000);
   </script>
 </head>
 <body></body>
